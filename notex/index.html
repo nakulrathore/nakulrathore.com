@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html manifest="nakul.appcache">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<style>
+		[contenteditable=true]:empty:before {
+			content: attr(placeholder);
+			display: block;
+			/* For Firefox */
+		}
+
+		@font-face {
+			font-family: droid;
+			src: url(DroidSerif.ttf);
+		}
+
+		#idd {
+			margin-top: 30px;
+			width: 85%;
+			margin-left: auto;
+			margin-right: auto;
+			font-family: droid;
+		}
+
+		#name {
+			margin: auto;
+			margin-top: 0px;
+			font-family: droid;
+			font-size: 48px;
+			font-weight: 590;
+			text-align: center;
+			color: #34495E;
+		}
+
+		#other {
+			margin: auto;
+			font-family: droid;
+			font-size: 30px;
+			font-weight: 390;
+			text-align: center;
+			color: #34495E;
+
+		}
+
+		#other1 {
+			margin: auto;
+			font-family: droid;
+			font-size: 15px;
+			font-weight: 390;
+			text-align: center;
+			color: #2C3E50;
+		}
+
+		#state {
+			font-family: droid;
+			font-size: 15px;
+			font-weight: 500;
+			left: 78%;
+			top: 20px;
+			position: fixed;
+			color: #34495E;
+		}
+
+	</style>
+
+
+
+
+</head>
+
+
+<body onload="myFunctionx()">
+	<span id="state"> </span>
+	<div id="name">❒</div>
+	<div id="other">NoteX</div>
+	<div id="other1"><b>Ctrl+b &emsp;</b><u>Ctrl+u</u><i>&emsp; Ctrl+i</i></div>
+	<div id="idd" contenteditable="true" style="min-height:200px; outline:0px;" oninput="myFunction()" onfocus="this.value = this.value;" placeholder="⧉ Type Here " autofocus></div>
+
+
+
+	<script>
+		function myFunction() {
+			var x = document.getElementById("idd").innerHTML;
+			localStorage.idd = x;
+			document.getElementById("state").innerHTML = "⌛ Saving...";
+			function_two();
+		}
+
+		function myFunctionx() {
+
+			if (localStorage.idd) {
+				document.getElementById("idd").innerHTML = localStorage.idd;
+			} else {
+				document.getElementById("idd").innerHTML = "";
+			}
+
+
+		}
+
+		function function_two() {
+
+			setTimeout(function() {
+				document.getElementById("state").innerHTML = "👍 Saved";
+			}, 800);
+
+		}
+
+	</script>
+</body>
+
+
+</html>
+<link rel="stylesheet" href="">
+<style></style>
+<script src=""></script>

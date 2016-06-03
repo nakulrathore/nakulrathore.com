@@ -1,0 +1,17 @@
+CACHE MANIFEST
+# Explicitly cached entries
+index.html
+DroidSerif.ttf
+
+
+
+FALLBACK:
+
+
+
+NETWORK:
+*
+
+
+CACHE:
+
