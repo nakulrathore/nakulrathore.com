@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+
+<head>
+    <link rel="manifest" href="/manifest.json">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="NoteX">
+  <link rel="apple-touch-icon" href="images/152x152.png">
+    
+    <meta name="msapplication-TileImage" content="images/144x144.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+    
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NoteX</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+   
+	<style>
+		[contenteditable=true]:empty:before {
+			content: attr(placeholder);
+			display: block;
+			/* For Firefox */
+		}
+
+		@font-face {
+			font-family: droid;
+			src: url(DroidSerif.ttf);
+		}
+
+		#idd {
+			margin-top: 20px;
+			width: 85%;
+			margin-left: auto;
+			margin-right: auto;
+			font-family: droid;
+		}
+
+		#name {
+			margin: auto;
+			margin-top: 0px;
+			font-family: droid;
+			font-size: 48px;
+			font-weight: 590;
+			text-align: center;
+			color: #34495E;
+		}
+
+		#other {
+			margin: auto;
+			font-family: droid;
+			font-size: 30px;
+			font-weight: 390;
+			text-align: center;
+			color: #34495E;
+
+		}
+
+		
+
+		#state {
+			font-family: droid;
+			font-size: 15px;
+			font-weight: 500;	
+			top: 20px;
+			color: #34495E;
+            position:fixed; 
+		}
+        notif{  
+            border-left:2px solid #34495E;
+            padding: 3px 3px;
+        }
+
+	</style>
+
+
+
+
+</head>
+
+
+<body onload="myFunctionx()">
+	<span id="state"> </span>
+	<div id="name">❒</div>
+	<div id="other">NoteX</div>
+	<div id="idd" contenteditable="true" style="min-height:200px; outline:0px;" oninput="myFunction()" onfocus="this.value = this.value;" placeholder="Type Here " autofocus></div>
+
+
+
+	<script>
+		function myFunction() {
+			var x = document.getElementById("idd").innerHTML;
+			localStorage.idd = x;
+			document.getElementById("state").innerHTML = "<notif>Saving..</notif>";
+			function_two();
+		}
+
+		function myFunctionx() {
+
+			if (localStorage.idd) {
+				document.getElementById("idd").innerHTML = localStorage.idd;
+			} else {
+				document.getElementById("idd").innerHTML = "";
+			}
+
+
+		}
+
+		function function_two() {
+
+			setTimeout(function() {
+				document.getElementById("state").innerHTML = "<notif>Saved</notif>";
+			}, 800);
+
+		}
+
+	</script>
+    <script src="app.js" ></script>
+</body>
+
+
+</html>
+<link rel="stylesheet" href="">
+<style></style>
+<script src=""></script>
