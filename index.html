@@ -1,1 +1,82 @@
-<center>unfortunately, I Cant find the time to build my own site.<br>I`m Just busy Working with my Customers.<br>but...<br>you can mail me: hi@nakulrathore.me</center>
+<html>
+	
+
+
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+
+<style type="text/css">	
+body{
+		background-color: #eee;
+
+}
+.cont{
+font-family: 'Slabo 27px', serif;
+	color: #34495e;
+	font-size: 23px;
+	line-height: 40px;
+	margin-top:15%;
+	margin-left:20%;
+}
+.underline{
+	border-bottom: 1px solid #95a5a6;
+	padding-bottom: 1px;
+	cursor: pointer;
+}
+.hidethis{
+	display: none;
+}
+.bold{
+	color: #16a085;
+}
+a{
+	font-style: normal;
+	text-decoration: none;
+		color: #16a085;
+
+	border-bottom: 1px solid #1abc9c;
+	padding-bottom: 1px;
+
+}
+
+</style>
+	</head>
+	<body>
+		
+		<div class="cont">Hi,<br>My Name is 
+				<span id="nakul" class="underline bold">Nakul</span>
+				<span id="linkedin" class="hidethis"><span class="bold"> Rathore</span><br>
+				follow me on <a href="https://in.linkedin.com/in/narendrasinghplus">Linkedin</a>&nbsp;&nbsp;
+
+		<span id="or" class="underline">or<span> </span><br>
+		<span id="mail" class="hidethis">mail me at : <span class="bold">nakulrathore@outlook.in</span></span>
+
+
+		</div>
+
+
+
+
+		<script type="text/javascript">
+	$('#nakul').click(function(){
+		var $this = $(this);
+		$this.removeClass('underline')
+		$('#linkedin').removeClass('hidethis');
+		
+	});
+
+	$('#or').click(function(){
+		var $this = $(this);
+		$this.removeClass('underline')
+		$('#mail').removeClass('hidethis');
+		
+	});
+
+		</script>
+	</body>
+
+
+</html>
