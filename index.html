@@ -1,83 +1,83 @@
 <html>
-	
 
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nakul Rathore</title>
 
-	<head>
-		<link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-		<script src="https://code.jquery.com/jquery-latest.min.js"
-        type="text/javascript"></script>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		body {
+			background-color: #eee;
+			font-family: 'Raleway', sans-serif;
+			font-size: 20px;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
 
+		#nakul {
+			font-size: 20px;
+			margin: 0 10px;
+		}
+		#mailid{
+			font-size: 15px;
+		}
 
-<style type="text/css">	
-body{
-		background-color: #eee;
+		.cont {
+			color: #34495e;
+			line-height: 40px;
+			margin: 0 auto;
+			display: inline-block;
+			text-align: left;
+			margin-top: 10%;
+		}
 
-}
-.cont{
-font-family: 'Slabo 27px', serif;
-	color: #34495e;
-	font-size: 23px;
-	line-height: 40px;
-	margin-top:15%;
-	margin-left:20%;
-}
-.underline{
-	border-bottom: 1px solid #95a5a6;
-	padding-bottom: 1px;
-	cursor: pointer;
-}
-.hidethis{
-	display: none;
-}
-.bold{
-	color: #16a085;
-}
-a{
-	font-style: normal;
-	text-decoration: none;
-		color: #16a085;
+		.underline {
+			border-bottom: 1px solid #16a085;
+			padding-bottom: 1px;
+			cursor: pointer;
+		}
 
-	border-bottom: 1px solid #1abc9c;
-	padding-bottom: 1px;
+		.hidethis {
+			display: none;
+		}
 
-}
+		.bold {
+			color: #34495e;
+		}
+		a {
+			font-style: normal;
+			text-decoration: none;
+			color: #16a085;
+			padding: 0 2px;
+			font-size: 18px;
 
-</style>
-	</head>
-	<body>
-		
-		<div class="cont">Hi,<br>My Name is 
-				<span id="nakul" class="underline bold">Nakul</span>
-				<span id="linkedin" class="hidethis"><span class="bold"> Rathore</span><br>
-				SMS me at : <a href="tel:+12037944668">+1 203-794-4668</a>&nbsp;&nbsp;
-		<span id="or" class="underline">or<span> </span><br>
-		<span id="mail" class="hidethis">mail me at : <span class="bold">nakulrathore@outlook.in</span></span>
+			border-bottom: 1px solid #1abc9c;
+			padding-bottom: 1px;
+		}
+	</style>
+</head>
 
+<body>
 
-		</div>
-
-
-
-
-		<script type="text/javascript">
-	$('#nakul').click(function(){
-		var $this = $(this);
-		$this.removeClass('underline')
-		$('#linkedin').removeClass('hidethis');
-		
-	});
-
-	$('#or').click(function(){
-		var $this = $(this);
-		$this.removeClass('underline')
-		$('#mail').removeClass('hidethis');
-		
-	});
-
-		</script>
-	</body>
+	<div class="cont">Hi,<br>my name is
+		<span id="nakul" class="underline bold">Nakul Rathore</span>
+		<span id="gitlink" class="hidethis"><span class="bold">find me at <a href="https://github.com/nakulrathore">github</a> & <a href="https://www.linkedin.com/in/narendrasinghplus">linkedin</a></span></span>
+		<span id="or" class="underline hidethis">or</span>
+		<span id="mail" class="hidethis">mail me at <span id="mailid" class="bold">hi@nakulrathore.com</span></span>
+	</div>
+	<script type="text/javascript">
+		document.getElementById('nakul').onclick = function (e) {
+			this.classList.remove("underline");
+			document.getElementById('gitlink').style = 'display:block'
+			document.getElementById('or').classList.remove("hidethis");
+		}
+		document.getElementById('or').onclick = function (e) {
+			document.getElementById('mail').style = 'display:block'
+			this.parentNode.removeChild(this);
+		}
+	</script>
+</body>
 
 
 </html>
