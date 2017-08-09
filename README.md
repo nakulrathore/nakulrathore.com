@@ -1,1 +1,1 @@
-[https://nakulrathore.com](https://nakulrathore.com)
+[https://www.nakulrathore.com](https://www.nakulrathore.com)
