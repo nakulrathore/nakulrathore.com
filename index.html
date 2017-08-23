@@ -1,83 +1,146 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Nakul Rathore</title>
+    <title>Nakul Rathore</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <style>
+        body {
+            text-align: center;
+            padding: 0;
+            padding-top: 50px;
+            margin: 0;
+        }
 
-	<style type="text/css">
-		body {
-			background-color: #eee;
-			font-family: 'Raleway', sans-serif;
-			font-size: 20px;
-			margin: 0;
-			padding: 0;
-			text-align: center;
-		}
+        * {
 
-		#nakul {
-			font-size: 20px;
-			margin: 0 10px;
-		}
-		#mailid{
-			font-size: 15px;
-		}
+            color: #222;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid
+ Sans", "Helvetica Neue", sans-serif;
 
-		.cont {
-			color: #34495e;
-			line-height: 40px;
-			margin: 0 auto;
-			display: inline-block;
-			text-align: left;
-			margin-top: 10%;
-		}
+        }
 
-		.underline {
-			border-bottom: 1px solid #16a085;
-			padding-bottom: 1px;
-			cursor: pointer;
-		}
+        .menu {
+            margin: 50px;
+        }
 
-		.hidethis {
-			display: none;
-		}
+        .link {
+            padding: 5px 20px;
+            background: #eee;
+            border-radius: 2px;
+            display: inline-block;
+            font-size: 13px;
+            display: none;
+        }
 
-		.bold {
-			color: #34495e;
-		}
-		a {
-			font-style: normal;
-			text-decoration: none;
-			color: #16a085;
-			padding: 0 2px;
-			font-size: 18px;
+        a {
+            text-decoration: none;
+            color: #00e;
+        }
 
-			border-bottom: 1px solid #1abc9c;
-			padding-bottom: 1px;
-		}
-	</style>
+        p {
+            font-size: 14px;
+        }
+
+
+        .menu>a {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 13px;
+            color: #222;
+            line-height: 50px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .menu>a:hover,
+        .menu>a:active {
+            border-color: #666;
+        }
+
+        span {
+            padding: 5px;
+        }
+
+        #linkedin:target {
+            display: inline-block;
+        }
+
+        #github:target {
+            display: inline-block;
+        }
+
+        #text:target {
+            display: inline-block;
+        }
+
+        #email:target {
+            display: inline-block;
+        }
+
+        #form:target {
+            display: inline-block;
+        }
+
+        input,
+        textarea {
+            border: 1px solid #999;
+            width: 300px;
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 13px;
+            font-family: inherit;
+        }
+
+        button {
+            margin: 0;
+            width: 322px;
+            padding: 10px;
+            background: #ccc;
+            border: 1px solid #999;
+        }
+
+        button:active {
+            background: #00e;
+        }
+    </style>
 </head>
 
 <body>
 
-	<div class="cont">Hi,<br>my name is
-		<span id="nakul" class="underline bold">Nakul Rathore</span>
-		<span id="gitlink" class="hidethis"><span class="bold">find me at <a href="https://github.com/nakulrathore">github</a> & <a href="https://www.linkedin.com/in/narendrasinghplus">linkedin</a></span></span>
-		<span id="or" class="underline hidethis">or</span>
-		<span id="mail" class="hidethis">mail me at <span id="mailid" class="bold">hi@nakulrathore.com</span></span>
-	</div>
-	<script type="text/javascript">
-		document.getElementById('nakul').onclick = function (e) {
-			this.classList.remove("underline");
-			document.getElementById('gitlink').style = 'display:block'
-			document.getElementById('or').classList.remove("hidethis");
-		}
-		document.getElementById('or').onclick = function (e) {
-			document.getElementById('mail').style = 'display:block'
-			this.parentNode.removeChild(this);
-		}
-	</script>
-</body>
+    <h1>Hi</h1>
+    <p>I'm Nakul Rathore</p>
+    <div class="menu">
+        <a href="#linkedin" id=""><span aria-hidden="true" class="icon-social-linkedin"></span>LinkedIn</a>
+        <a href="#github" id=""><span aria-hidden="true" class="icon-social-github"></span>Github</a>
+        <a href="#text" id=""><span aria-hidden="true" class="icon-bubbles"></span>Text</a>
+        <a href="#email" id=""><span aria-hidden="true" class="icon-envelope"></span>Mail</a>
+        <a href="#form" id=""><span aria-hidden="true" class="icon-speech"></span>Send Message</a>
+    </div>
 
+    <p id="linkedin" class="link"><a href="https://www.linkedin.com/in/narendrasinghplus">https://www.linkedin.com/in/narendrasinghplus</a></p>
+    <p id="github" class="link"><a href="https://github.com/nakulrathore">https://github.com/nakulrathore</a></p>
+    <p id="text" class="link">text me: +1-203-7944668</p>
+    <p id="email" class="link">mail me: hi@nakulrathore.com</p>
+
+    <form id="form" class="link" name="contact" netlify-honeypot="bot-field" action="thank-you" netlify>
+        <p class="hidden">
+            <label>Don’t fill this out: <input name="bot-field"></label>
+        </p>
+        <input type="email" name="email" placeholder="Email" required>
+
+        <textarea rows="5" name="message" placeholder="Name and Message" required></textarea>
+
+        <button type=”submit”>Send</button>
+    </form>
+
+</body>
 
 </html>
