@@ -1,0 +1,121 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    color: #444;
+    background: #00d2ff;
+    background: -webkit-linear-gradient(to left, #3a7bd5, #00d2ff);
+    background: linear-gradient(to left, #3a7bd5, #00d2ff);
+    height: 100%;
+    min-height: 100%;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #444;
+}
+*{
+    box-sizing: border-box;
+}
+
+.Container {
+    /* position: relative; */
+    height: 100%;
+}
+
+.Center {
+    width: calc(100% - 200px);
+    height: 90%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 50px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    border: 0;
+}
+
+
+
+
+.cont {
+    clear: both;
+    padding: 200px 100px 0 100px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 700px;
+    /* background: #ccc; */
+}
+.navwrapper {
+    width: 700px;
+    float: right;
+}
+
+@media only screen and (max-width: 500px) {
+    .Center {
+        width: 95%;
+        height: 95%;
+        padding: 25px 0;
+
+    }
+    .cont{
+        width: 95%;
+        padding: 50px 10px 0 10px
+    }
+    .navwrapper{
+        width: 95%;
+        margin: 0 auto;
+        float:none;
+    }
+}
+
+nav > a {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: #555;
+    padding: 5px 0;
+    font-size: 15px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+a:hover {
+    color: #000;
+}
+
+.para {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 300;
+
+}
+
+.externalLink {
+    font-size: inherit;
+    background: rgba(162, 155, 254,0.2);
+    padding: 0 5px;
+
+}
+.externalLink:hover {
+    background: rgba(162, 155, 254,0.5);
+}
+small{
+    font-size: 12px;
+}
