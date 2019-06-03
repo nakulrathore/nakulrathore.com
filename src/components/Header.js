@@ -6,7 +6,7 @@ const Header = () => (
         <nav>
             <Link to="/">Home</Link>
             <Link to="https://github.com/nakulrathore" target="_blank">Github</Link>
-            <Link to="https://www.dropbox.com/s/qi5fhidge7o1mml/Narendra-singh.pdf?dl=0" target="_blank">Resume</Link>
+            <Link to="https://www.dropbox.com/s/nkvujnqsk47r8sg/Resume%20-%20Narendra%20Singh%20Rathore%20-Frontend.pdf?dl=0" target="_blank">Resume</Link>
             <Link to="/contact">Contact</Link>
         </nav>
     </div>
